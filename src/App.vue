@@ -1,13 +1,13 @@
 <template>
     <BG />
     <Title />
-    <Glass v-for="_ in GlassContent" v-bind:title="_.title" v-bind:noteList="_.noteList" v-bind:imgsrc="_.imgsrc" :key="_"/>
+    <Category v-for="_ in GlassContent" v-bind:title="_.title" v-bind:noteList="_.noteList" v-bind:imgsrc="_.imgsrc" :key="_" />
 </template>
 
 <script setup>
     import BG from './components/BG.vue';
     import Title from './components/Title.vue';
-    import Glass from './components/Glass.vue';
+    import Category from './components/Category.vue'
 
     const GlassContent = [
         {
