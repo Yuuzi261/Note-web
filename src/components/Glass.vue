@@ -1,8 +1,32 @@
 <template>
-    <div class="glass-container" id="glass"></div>
+    <div class="category-block">
+        <div class="glass-container">
+            <div>
+                <h2>{{title}}</h2>
+                <div class="notes"><li v-for="note in noteList" :key="note">{{note}}</li></div>
+            </div>    
+            <img :src="imgsrc" />
+        </div>
+    </div> 
 </template>
   
 <script setup>
+import {ref} from 'vue'
+
+    defineProps({
+        title: {
+            type: String,
+            default: 'TITLE'
+        },
+        noteList: {
+            type: Array,
+            default: ['note1', 'note2', 'note3']
+        },
+        imgsrc: {
+            type: String,
+            default: ''
+        }
+    })
 </script>
   
 <style scoped>
@@ -21,6 +45,16 @@
     border: 2px rgba(255,255,255,0.4) solid;
     border-bottom: 2px rgba(40,40,40,0.35) solid;
     border-right: 2px rgba(40,40,40,0.35) solid;
+}
+
+.notes {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.notes li{
+    text-align: left;
 }
 </style>
   
