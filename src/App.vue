@@ -18,12 +18,12 @@
         {
             title: 'courses',
             noteList: ['MACHINE LEARNING 2022 SPRING'],
-            imgsrc: 'https://i.imgur.com/Lj0mZGO.png'
+            imgsrc: 'https://i.imgur.com/a9UH7GR.png'
         },
         {
             title: 'spice up',
             noteList: ['美化 Windows Terminal'],
-            imgsrc: 'https://i.imgur.com/Lj0mZGO.png'
+            imgsrc: 'https://i.imgur.com/4STX0PV.png'
         }
     ]
 </script>

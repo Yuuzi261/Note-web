@@ -1,5 +1,5 @@
 <template>
-    <div class="category-block">
+    <div class="glass-block">
         <div class="glass-container">
             <div>
                 <h2>{{title}}</h2>
@@ -11,8 +11,6 @@
 </template>
   
 <script setup>
-import {ref} from 'vue'
-
     defineProps({
         title: {
             type: String,
@@ -30,7 +28,10 @@ import {ref} from 'vue'
 </script>
   
 <style scoped>
-.glass-container{
+.glass-block {
+    width: auto;
+}
+.glass-container {
     width: 700px;
     height: 375px;
     color: white;
