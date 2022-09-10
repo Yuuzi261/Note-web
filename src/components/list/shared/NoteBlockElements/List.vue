@@ -1,34 +1,21 @@
 <template>
     <div class="glass-block">
         <div class="glass-container">
-            <div>
+            <!-- <div>
                 <h2>{{title}}</h2>
-            </div>    
+            </div>     -->
             <img :src="icon" />
         </div>
     </div>
-    <br v-for="_ in 3" :key="_" />
 </template>
   
 <script setup>
     defineProps({
-        title: {
-            type: String,
-            default: 'TITLE'
-        },
-        link: {
-            type: String,
-            default: ''
-        },
         icon: {
             type: String,
             default: ''
         }
     })
-
-    const toNote = (link) => {
-        self.location=link
-    }
 </script>
   
 <style scoped>
@@ -41,8 +28,8 @@ h2 {
     width: auto;
 }
 .glass-container {
-    width: 700px;
-    height: 375px;
+    width: 300px;
+    height: 300px;
     color: white;
     display: flex;
     justify-content: center;
