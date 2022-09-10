@@ -1,9 +1,23 @@
 <template>
-    <p>spice up</p>
+    <BG />
+    <Title :titleText="selfName" />
+    <NoteBlock v-for="_ in noteContent" :textTitle="_.title" :link="_.link" :icon="_.icon" :key="_" />
 </template>
   
 <script setup>
+    import BG from '../../components/index/BG.vue';
+    import Title from './shared/title.vue';
+    import NoteBlock from './shared/NoteBlock.vue';
 
+    const selfName = '個人化'
+
+    const noteContent = [
+        {
+            title: '美化 Windows Terminal',
+            link: 'https://hackmd.io/@Yuuzi/wt',
+            icon: 'https://i.imgur.com/CwEbyvE.png'
+        }
+    ]
 </script>
   
 <style scoped>
