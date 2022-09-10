@@ -1,6 +1,6 @@
 <template>
     <div class="category-block">
-        <TextBox />
+        <TextBox v-bind="$attrs" />
         <Glass v-bind="$attrs" />
     </div>
     <br v-for="_ in 10" :key="_" />
@@ -13,7 +13,7 @@
   
 <style scoped>
 .category-block {
-    padding: 0px 75px 0px 75px;
+    padding: 0 15% 0 15%;
     display: flex;
     flex-direction: row;
     align-items: center;
