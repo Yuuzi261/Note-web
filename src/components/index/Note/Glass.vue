@@ -31,6 +31,12 @@
 .glass-block {
     width: auto;
 }
+
+.glass-block:hover {
+    cursor: pointer;
+    animation: hoverGlass 0.05s ease-in-out;
+    animation-fill-mode: forwards;
+}
 .glass-container {
     width: 700px;
     height: 375px;
@@ -56,6 +62,15 @@
 
 .notes li{
     text-align: left;
+}
+
+@keyframes hoverGlass {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(10px);
+    }
 }
 </style>
   
