@@ -14,7 +14,7 @@
     right: 0;
     z-index: -999;
     background-color: #b7e0f3;
-    background-image: url('../assets/bg1.svg');
+    background-image: url('../../assets/bg1.svg');
 }
 </style>
   
