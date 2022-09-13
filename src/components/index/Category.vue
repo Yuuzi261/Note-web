@@ -18,7 +18,7 @@
     })
 
     const toPage = (link) => {
-        self.location = './pages/' + link + '/' + link + '.html'
+        self.location = './static/' + link + '/' + link + '.html'
     }
 </script>
   
