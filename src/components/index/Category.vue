@@ -6,20 +6,44 @@
     <br v-for="_ in 10" :key="_" />
 </template>
   
-<script setup>
+<script>
     import TextBox from './Note/TextBox.vue';
     import Glass from './Note/Glass.vue';
 
-    defineProps({
-        link: {
-            type: String,
-            default: ''
-        }
-    })
+    // defineProps({
+    //     link: {
+    //         type: String,
+    //         default: ''
+    //     }
+    // });
 
-    const toPage = (link) => {
-        self.location = './pages/' + link + '/' + link + '.html'
-    }
+    export default {
+        data(){
+            return {
+                link: {
+                    type: String,
+                    default: ''
+                },
+            }
+        },
+        methods:{
+            toPage(){
+                this.$router.push({path: "/courses"});
+                console.log("log");
+            }
+        },
+        components:{
+            TextBox,
+            Glass
+        }
+    };
+
+    // const toPage = (link) => {
+    //     // self.location = './pages/' + link + '/' + link + '.html'
+    //     // this.$router.push("/courses");
+    //     router.push("/courses");
+    //     console.log("log")
+    // }
 </script>
   
 <style scoped>
