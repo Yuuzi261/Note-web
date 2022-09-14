@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue';
 import Main from './Main.vue';
-// import courses from './pages/courses/courses.vue';
 import courses from './components/list/courses.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
