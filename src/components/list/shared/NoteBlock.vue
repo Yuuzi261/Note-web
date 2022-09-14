@@ -22,7 +22,7 @@
     })
 
     const toNote = (link) => {
-        self.location=link
+        window.open(link)
     }
 </script>
   
