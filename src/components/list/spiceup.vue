@@ -15,7 +15,7 @@
         {
             title: '美化 Windows Terminal',
             link: 'https://hackmd.io/@Yuuzi/wt',
-            icon: 'https://i.imgur.com/CwEbyvE.png'
+            icon: '../src/assets/notes/spiceup/wt.png'
         }
     ]
 </script>

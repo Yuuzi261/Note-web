@@ -15,17 +15,17 @@
         {
             title: '安裝 Python',
             link: 'https://hackmd.io/@Yuuzi/install-python',
-            icon: 'https://i.imgur.com/PnZSdto.png'
+            icon: '../src/assets/notes/install/python.png'
         },
         {
             title: '安裝 Visual Studio Code',
             link: 'https://hackmd.io/@Yuuzi/install-vscode',
-            icon: 'https://i.imgur.com/TFsjewn.png'
+            icon: '../src/assets/notes/install/vscode.png'
         },
         {
             title: '安裝 Git',
             link: '',
-            icon: 'https://i.imgur.com/PuXhba2.png'
+            icon: '../src/assets/notes/install/git.png'
         }
     ]
 </script>

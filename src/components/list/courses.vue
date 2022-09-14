@@ -16,7 +16,7 @@
         {
             title: 'MACHINE LEARNING 2022 SPRING',
             link: 'https://hackmd.io/@Yuuzi/ML2022SPRING',
-            icon: 'https://i.imgur.com/9CBGB2d.png'
+            icon: '../src/assets/notes/courses/note.png'
         }
     ]
 </script>
