@@ -1,9 +1,12 @@
 <template>
-    <div @click="toNote(link)" class="NB">
-        <List v-bind="$attrs" />
-        <div class="blank"></div>
-        <Logo v-bind="$attrs" />
+    <div class="NB-block">
+        <div @click="toNote(link)" class="NB">
+            <List v-bind="$attrs" />
+            <div class="blank"></div>
+            <Logo v-bind="$attrs" />
+        </div>
     </div>
+    
     <br v-for="_ in 3" :key="_" />
 </template>
   
@@ -24,9 +27,16 @@
 </script>
   
 <style scoped>
+.NB-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .NB {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 1000px;
     padding: 20px;
     border-style: hidden;
