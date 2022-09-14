@@ -6,11 +6,11 @@ import { resolve } from "path";
 export default defineConfig({
 	base: '/Note-web/',
 	plugins: [vue()],
-	build: {
-		rollupOptions: {
-			input: {
-				main: resolve(__dirname, 'public/index.html'),
-			}
-		}
-	}
+	// build: {
+	// 	rollupOptions: {
+	// 		input: {
+	// 			main: resolve(__dirname, 'public/index.html'),
+	// 		}
+	// 	}
+	// }
 })
