@@ -10,26 +10,17 @@
     import TextBox from './Note/TextBox.vue';
     import Glass from './Note/Glass.vue';
 
-    // defineProps({
-    //     link: {
-    //         type: String,
-    //         default: ''
-    //     }
-    // });
-
     export default {
-        data(){
-            return {
-                link: {
-                    type: String,
-                    default: ''
-                },
+        props:{
+            link:{
+                type: String,
+                default: ''
             }
         },
         methods:{
-            toPage(){
-                this.$router.push({path: "/courses"});
-                console.log("log");
+            toPage(link){
+                const path = '/' + link
+                this.$router.push({path: path});
             }
         },
         components:{
@@ -37,13 +28,6 @@
             Glass
         }
     };
-
-    // const toPage = (link) => {
-    //     // self.location = './pages/' + link + '/' + link + '.html'
-    //     // this.$router.push("/courses");
-    //     router.push("/courses");
-    //     console.log("log")
-    // }
 </script>
   
 <style scoped>
