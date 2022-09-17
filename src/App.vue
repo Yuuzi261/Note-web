@@ -8,11 +8,11 @@
     import BG from './components/index/BG.vue';
     import Headline from './components/index/Headline.vue';
     import Category from './components/index/Category.vue';
-    import NoteBlockData from '../static/NoteBlockData.json';
+    import CategoryData from '../static/CategoryData.json';
 
     export default {
         setup(){
-            const Content = NoteBlockData.data
+            const Content = CategoryData.data
             console.log(Content)
 
             return {
@@ -21,7 +21,7 @@
         },
         data(){
             return{
-                NoteBlockData
+                CategoryData
             }
         },
         components:{
