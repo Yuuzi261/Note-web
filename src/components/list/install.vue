@@ -8,11 +8,12 @@
     import BG from '../../components/index/BG.vue';
     import Headline from './shared/NoteListHeadline.vue';
     import NoteBlock from './shared/NoteBlock.vue';
+    import CategoryTitle from '../../../static/CategoryTitle.json';
     import NoteData from '../../../static/NoteData.json';
 
     export default {
         setup(){
-            const selfName = '安裝教學';
+            const selfName = CategoryTitle.install;
             const noteContent = NoteData.install;
 
             return{
@@ -21,7 +22,7 @@
         },
         data(){
             return{
-                NoteData
+                CategoryTitle, NoteData
             }
         },
         components:{
