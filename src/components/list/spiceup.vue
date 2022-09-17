@@ -4,20 +4,33 @@
     <NoteBlock v-for="_ in noteContent" :textTitle="_.title" :link="_.link" :icon="_.icon" :key="_" />
 </template>
   
-<script setup>
+<script>
     import BG from '../../components/index/BG.vue';
     import Headline from './shared/NoteListHeadline.vue';
     import NoteBlock from './shared/NoteBlock.vue';
+    import CategoryTitle from '../../../static/CategoryTitle.json';
+    import NoteData from '../../../static/NoteData.json';
 
-    const selfName = '個人化'
+    export default {
+        setup(){
+            const selfName = CategoryTitle.spiceup;
+            const noteContent = NoteData.spiceup;
 
-    const noteContent = [
-        {
-            title: '美化 Windows Terminal',
-            link: 'https://hackmd.io/@Yuuzi/wt',
-            icon: 'https://i.imgur.com/CwEbyvE.png'
+            return{
+                selfName, noteContent
+            }
+        },
+        data(){
+            return{
+                CategoryTitle, NoteData
+            }
+        },
+        components:{
+            BG,
+            Headline,
+            NoteBlock
         }
-    ]
+    }
 </script>
   
 <style scoped>

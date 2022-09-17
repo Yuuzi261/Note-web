@@ -3,31 +3,34 @@
     <Headline :titleText="selfName" />
     <NoteBlock v-for="_ in noteContent" :textTitle="_.title" :link="_.link" :icon="_.icon" :key="_" />
 </template>
-  
-<script setup>
+
+<script>
     import BG from '../../components/index/BG.vue';
     import Headline from './shared/NoteListHeadline.vue';
     import NoteBlock from './shared/NoteBlock.vue';
+    import CategoryTitle from '../../../static/CategoryTitle.json';
+    import NoteData from '../../../static/NoteData.json';
 
-    const selfName = '安裝教學'
+    export default {
+        setup(){
+            const selfName = CategoryTitle.install;
+            const noteContent = NoteData.install;
 
-    const noteContent = [
-        {
-            title: '安裝 Python',
-            link: 'https://hackmd.io/@Yuuzi/install-python',
-            icon: 'https://i.imgur.com/PnZSdto.png'
+            return{
+                selfName, noteContent
+            }
         },
-        {
-            title: '安裝 Visual Studio Code',
-            link: 'https://hackmd.io/@Yuuzi/install-vscode',
-            icon: 'https://i.imgur.com/TFsjewn.png'
+        data(){
+            return{
+                CategoryTitle, NoteData
+            }
         },
-        {
-            title: '安裝 Git',
-            link: '',
-            icon: 'https://i.imgur.com/PuXhba2.png'
+        components:{
+            BG,
+            Headline,
+            NoteBlock
         }
-    ]
+    }
 </script>
   
 <style scoped>
