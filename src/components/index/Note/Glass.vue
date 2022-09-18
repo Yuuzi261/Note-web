@@ -5,7 +5,7 @@
                 <h2>{{title}}</h2>
                 <div class="notes"><li v-for="note in noteList" :key="note">{{note}}</li></div>
             </div>    
-            <img :src="getImageUrl(imgsrc)" />
+            <img :src="imgsrc" />
         </div>
     </div> 
 </template>
@@ -25,10 +25,6 @@
             default: ''
         }
     })
-
-    const getImageUrl = (name) => {
-        return new URL(`../../../../src/assets/index/${name}`, import.meta.url).href;
-    }
 </script>
   
 <style scoped>

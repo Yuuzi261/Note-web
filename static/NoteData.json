@@ -4,17 +4,17 @@
         {
             "title": "安裝 Python",
             "link": "https://hackmd.io/@Yuuzi/install-python",
-            "icon": "../src/assets/notes/install/python.png"
+            "icon": "/notes/install/python.png"
         },
         {
             "title": "安裝 Visual Studio Code",
             "link": "https://hackmd.io/@Yuuzi/install-vscode",
-            "icon": "../src/assets/notes/install/vscode.png"
+            "icon": "/notes/install/vscode.png"
         },
         {
             "title": "安裝 Git",
             "link": "",
-            "icon": "../src/assets/notes/install/git.png"
+            "icon": "/notes/install/git.png"
         }
     ],
     "spiceup":
@@ -22,7 +22,7 @@
         {
             "title": "美化 Windows Terminal",
             "link": "https://hackmd.io/@Yuuzi/wt",
-            "icon": "../src/assets/notes/spiceup/wt.png"
+            "icon": "/notes/spiceup/wt.png"
         }
     ],
     "courses":
@@ -30,7 +30,7 @@
         {
             "title": "MACHINE LEARNING 2022 SPRING",
             "link": "https://hackmd.io/@Yuuzi/ML2022SPRING",
-            "icon": "../src/assets/notes/courses/note.png"
+            "icon": "/notes/courses/note.png"
         }
     ]
 }
