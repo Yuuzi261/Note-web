@@ -13,7 +13,6 @@
     export default {
         setup(){
             const Content = CategoryData.data
-            console.log(Content)
 
             return {
                 Content
