@@ -14,7 +14,7 @@
     export default {
         setup(){
             const selfName = CategoryTitle.courses;
-            const noteContent = NoteData.course;
+            const noteContent = NoteData.courses;
 
             return{
                 selfName, noteContent
