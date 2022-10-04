@@ -11,7 +11,7 @@
         },
         {
             "title": "spice up",
-            "noteList": ["美化 Windows Terminal"],
+            "noteList": ["美化 Windows Terminal", "提升 PowerShell 的使用體驗"],
             "imgsrc": "/Note-web/index/2.png",
             "textTitle": "個人化",
             "text": "想來點不一樣的? 試試這個",
