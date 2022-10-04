@@ -23,6 +23,11 @@
             "title": "美化 Windows Terminal",
             "link": "https://hackmd.io/@Yuuzi/wt",
             "icon": "/Note-web/list/spiceup/wt.png"
+        },
+        {
+            "title": "提升 PowerShell 的使用體驗",
+            "link": "https://hackmd.io/@Yuuzi/ps",
+            "icon": "/Note-web/list/spiceup/ps.png"
         }
     ],
     "courses":
