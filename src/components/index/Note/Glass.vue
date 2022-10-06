@@ -33,8 +33,9 @@ export default {
                 clientWidth = document.documentElement.clientWidth;
                 return clientWidth;
             }
-            if(clientWidth > 1250) return clientWidth * 0.361 + 'px';
-            else return clientWidth * 0.85 + 'px';
+            if(clientWidth > 1400) return '675px';
+            else if(clientWidth > 1250) return clientWidth * 0.48 + 'px';
+            else return clientWidth * 0.8 + 'px';
         },
         setImgSize: () => {
             if(document.documentElement.clientWidth <= 1250) return '45%';
