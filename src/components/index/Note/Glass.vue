@@ -1,17 +1,18 @@
 <template>
     <div class="glass-block">
-        <div class="glass-container">
+        <div class="glass-container" :style="{'width':setClientWidth}">
             <div>
                 <h2>{{title}}</h2>
                 <div class="notes"><li v-for="note in noteList" :key="note">{{note}}</li></div>
             </div>    
-            <img :src="imgsrc" />
+            <img :src="imgsrc" :style="{'width':setImgSize}"/>
         </div>
     </div> 
 </template>
-  
-<script setup>
-    defineProps({
+
+<script>
+export default {
+    props:{
         title: {
             type: String,
             default: 'TITLE'
@@ -24,7 +25,22 @@
             type: String,
             default: ''
         }
-    })
+    },
+    computed:{
+        setClientWidth: () => {
+            let clientWidth = document.documentElement.clientWidth;
+            window.onresize = () => {
+                clientWidth = document.documentElement.clientWidth;
+                return clientWidth;
+            }
+            if(clientWidth > 1250) return clientWidth * 0.361 + 'px';
+            else return clientWidth * 0.85 + 'px';
+        },
+        setImgSize: () => {
+            if(document.documentElement.clientWidth <= 1250) return '45%';
+        }
+    }
+}
 </script>
   
 <style scoped>
@@ -38,7 +54,7 @@
     animation-fill-mode: forwards;
 }
 .glass-container {
-    width: 700px;
+    /* width: 700px; */
     height: 375px;
     color: white;
     display: flex;
@@ -52,6 +68,7 @@
     border: 2px rgba(255,255,255,0.4) solid;
     border-bottom: 2px rgba(40,40,40,0.35) solid;
     border-right: 2px rgba(40,40,40,0.35) solid;
+    padding: 0px 15px;
 }
 
 .notes {

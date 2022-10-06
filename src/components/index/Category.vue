@@ -1,5 +1,5 @@
 <template>
-    <div class="category-block">
+    <div class="category-block" :style="{'flex-direction': decideArrangement}">
         <TextBox v-bind="$attrs" />
         <Glass v-bind="$attrs" @click="toPage(link)"/>
     </div>
@@ -23,6 +23,12 @@
                 this.$router.push({path: path});
             }
         },
+        computed:{
+            decideArrangement: () => {
+                if(document.documentElement.clientWidth > 1250) return 'row';
+                else return 'column';
+            }
+        },
         components:{
             TextBox,
             Glass
@@ -34,7 +40,7 @@
 .category-block {
     padding: 0 15% 0 15%;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
 }
 </style>
