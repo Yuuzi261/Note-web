@@ -9,6 +9,7 @@
 <script>
     import TextBox from './Note/TextBox.vue';
     import Glass from './Note/Glass.vue';
+    import global_ from '../Global';
 
     export default {
         props:{
@@ -25,7 +26,7 @@
         },
         computed:{
             decideArrangement: () => {
-                if(document.documentElement.clientWidth > 1250) return 'row';
+                if(document.documentElement.clientWidth > global_.MIDDLE_SCREEN) return 'row';
                 else return 'column';
             }
         },

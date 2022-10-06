@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import global_ from '../../Global';
+
 export default {
     props:{
         textTitle: {
@@ -19,7 +21,7 @@ export default {
     },
     computed:{
         decideTitleDisplay: () => {
-            if(document.documentElement.clientWidth > 1250) return 'left';
+            if(document.documentElement.clientWidth > global_.MIDDLE_SCREEN) return 'left';
             else return 'center';
         }
     }

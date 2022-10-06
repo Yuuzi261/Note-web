@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import global_ from '../../Global';
+
 export default {
     props:{
         title: {
@@ -33,12 +35,13 @@ export default {
                 clientWidth = document.documentElement.clientWidth;
                 return clientWidth;
             }
-            if(clientWidth > 1400) return '675px';
-            else if(clientWidth > 1250) return clientWidth * 0.48 + 'px';
+            if(clientWidth > global_.WIDE_SCREEN) return '675px';
+            else if(clientWidth > global_.MIDDLE_SCREEN) return clientWidth * 0.48 + 'px';
             else return clientWidth * 0.8 + 'px';
         },
         setImgSize: () => {
-            if(document.documentElement.clientWidth <= 1250) return '45%';
+            if(document.documentElement.clientWidth <= global_.MIDDLE_SCREEN) return '35%';
+            else if(document.documentElement.clientWidth <= global_.SMALL_SCREEN) return '45%';
         }
     }
 }
