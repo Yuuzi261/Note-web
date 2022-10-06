@@ -1,12 +1,13 @@
 <template>
-    <div>
+    <div :style="{'text-align':decideTitleDisplay}">
         <h2>{{textTitle}}</h2>
         <p>{{text}}</p>
     </div>
 </template>
-  
-<script setup>
-    defineProps({
+
+<script>
+export default {
+    props:{
         textTitle: {
             type: String,
             default: 'TITLE'
@@ -15,8 +16,16 @@
             type: String,
             default: 'text'
         }
-    })
+    },
+    computed:{
+        decideTitleDisplay: () => {
+            if(document.documentElement.clientWidth > 1250) return 'left';
+            else return 'center';
+        }
+    }
+}
 </script>
+
   
 <style scoped>
 h2 {
