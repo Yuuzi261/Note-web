@@ -1,9 +1,9 @@
 <template>
+    <div class="blank"></div>
     <div class="category-block" :style="{'flex-direction': decideArrangement}">
         <TextBox v-bind="$attrs" />
         <Glass v-bind="$attrs" @click="toPage(link)"/>
     </div>
-    <br v-for="_ in 10" :key="_" />
 </template>
   
 <script>
@@ -43,5 +43,9 @@
     display: flex;
     /* flex-direction: row; */
     align-items: center;
+}
+
+.blank {
+  height: 15rem;
 }
 </style>

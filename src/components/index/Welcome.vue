@@ -1,13 +1,15 @@
 <template>
     <div class="welcome" :style="{'height':getClientHeight}">
         <BG />
-        <div class='blank'></div>
+        <div class="blank"></div>
         <img src="/Note-web/index/welcome.png" />
+        <Headline />
     </div>
 </template>
 
 <script>
     import BG from './BG.vue';
+    import Headline from './Headline.vue';
     import global_ from '../Global';
 
     export default {
@@ -21,7 +23,7 @@
             return clientHeight;
         }
     },
-    components: { BG }
+    components: { BG, Headline }
 }
 </script>
 
@@ -29,5 +31,9 @@
 img {
     width: 100%;
     max-width: max-content;
+}
+
+.blank {
+  height: 8.5rem;
 }
 </style>

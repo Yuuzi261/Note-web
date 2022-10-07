@@ -40,7 +40,6 @@
     width: 1000px;
     padding: 20px;
     border-style: hidden;
-    border-color: black;
 }
 
 .NB:hover {

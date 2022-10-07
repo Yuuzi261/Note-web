@@ -1,8 +1,7 @@
 <template>
     <welcome />
-    <!-- <BG /> -->
-    <!-- <Headline /> -->
     <Category v-for="_ in Content" :title="_.title" :noteList="_.noteList" :imgsrc="_.imgsrc" :textTitle="_.textTitle" :text="_.text" :link="_.link" :key="_" />
+    <div class="blank"></div>
 </template>
 
 <script>
@@ -29,7 +28,7 @@
             BG,
             Headline,
             Category,
-                Welcome
+            Welcome
         }
     }
 
@@ -37,4 +36,7 @@
 </script>
 
 <style scoped>
+.blank {
+  height: 15rem;
+}
 </style>
