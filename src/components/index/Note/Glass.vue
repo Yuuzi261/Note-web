@@ -74,8 +74,8 @@ export default {
         border-color: #afb8c1;
     }
     .glass-container:hover {
-    color: #526e87;
-    border-color: #526e87;
+        color: #526e87;
+        border-color: #526e87;
     }
 }
 
@@ -84,8 +84,8 @@ export default {
         border-color: #d0d7de;
     }
     .glass-container:hover {
-    color: #b7e0f3;
-    border-color: #b7e0f3;
+        color: #b7e0f3;
+        border-color: #b7e0f3;
     }
 }
 
