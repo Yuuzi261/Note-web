@@ -1,10 +1,12 @@
 <template>
-    <BG />
-    <Headline />
+    <welcome />
+    <!-- <BG /> -->
+    <!-- <Headline /> -->
     <Category v-for="_ in Content" :title="_.title" :noteList="_.noteList" :imgsrc="_.imgsrc" :textTitle="_.textTitle" :text="_.text" :link="_.link" :key="_" />
 </template>
 
 <script>
+    import Welcome from './components/index/Welcome.vue';
     import BG from './components/index/BG.vue';
     import Headline from './components/index/Headline.vue';
     import Category from './components/index/Category.vue';
@@ -26,7 +28,8 @@
         components:{
             BG,
             Headline,
-            Category
+            Category,
+                Welcome
         }
     }
 

@@ -70,6 +70,10 @@ button:focus-visible {
   padding: 2em;
 }
 
+.blank {
+  height: 8.5rem;
+}
+
 #app {
   display: flex;
   flex-direction: column;
