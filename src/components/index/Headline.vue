@@ -1,6 +1,6 @@
 <template>
     <div id = 'title-block'>
-        <h1 id = 'title' :key = 'titleText'>{{ titleText }}</h1>
+        <h2 id = 'title' :key = 'titleText'>{{ titleText }}</h2>
     </div>
     
 </template>
@@ -8,9 +8,9 @@
 <script setup>
     import { ref } from 'vue'
 
-    const titleText = ref('歡迎');
+    const titleText = ref('WELCOME');
     setTimeout(() => {
-        titleText.value = '金桔的筆記庫';
+        titleText.value = 'Yuuzi\'s Notes';
     }, 2000)
 </script>
 
@@ -21,7 +21,7 @@
 
 #title-block {
     height: 300px;
-    padding-top: 150px;
+    /* padding-top: 150px; */
 }
 
 @keyframes openIn {

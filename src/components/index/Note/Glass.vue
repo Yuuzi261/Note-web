@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import global_ from '../../Global';
+
 export default {
     props:{
         title: {
@@ -33,11 +35,13 @@ export default {
                 clientWidth = document.documentElement.clientWidth;
                 return clientWidth;
             }
-            if(clientWidth > 1250) return clientWidth * 0.361 + 'px';
-            else return clientWidth * 0.85 + 'px';
+            if(clientWidth > global_.WIDE_SCREEN) return '675px';
+            else if(clientWidth > global_.MIDDLE_SCREEN) return clientWidth * 0.48 + 'px';
+            else return clientWidth * 0.8 + 'px';
         },
         setImgSize: () => {
-            if(document.documentElement.clientWidth <= 1250) return '45%';
+            if(document.documentElement.clientWidth <= global_.MIDDLE_SCREEN) return '35%';
+            else if(document.documentElement.clientWidth <= global_.SMALL_SCREEN) return '45%';
         }
     }
 }
@@ -56,19 +60,33 @@ export default {
 .glass-container {
     /* width: 700px; */
     height: 375px;
-    color: white;
+    padding: 0px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    border-style: solid;
     border-radius: 10px;
-    backdrop-filter: blur(5px);
-    background-color: rgba(0,191,255, 0.075);
-    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
-    border: 2px rgba(255,255,255,0.4) solid;
-    border-bottom: 2px rgba(40,40,40,0.35) solid;
-    border-right: 2px rgba(40,40,40,0.35) solid;
-    padding: 0px 15px;
+}
+
+@media (prefers-color-scheme: light) {
+    .glass-container {
+        border-color: #afb8c1;
+    }
+    .glass-container:hover {
+    color: #526e87;
+    border-color: #526e87;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .glass-container {
+        border-color: #d0d7de;
+    }
+    .glass-container:hover {
+    color: #b7e0f3;
+    border-color: #b7e0f3;
+    }
 }
 
 .notes {
