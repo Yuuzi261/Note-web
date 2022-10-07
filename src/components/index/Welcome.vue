@@ -2,7 +2,7 @@
     <div class="welcome" :style="{'height':getClientHeight}">
         <BG />
         <div class="blank"></div>
-        <img src="/Note-web/index/welcome.png" />
+        <img src="/index/welcome.png" />
         <Headline />
     </div>
 </template>
