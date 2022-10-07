@@ -1,9 +1,9 @@
 <template>
-    <div class="blank"></div>
     <div class="category-block" :style="{'flex-direction': decideArrangement}">
         <TextBox v-bind="$attrs" />
         <Glass v-bind="$attrs" @click="toPage(link)"/>
     </div>
+    <div class="blank"></div>
 </template>
   
 <script>
