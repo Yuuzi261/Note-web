@@ -6,6 +6,7 @@ import install from './components/list/install.vue';
 import spiceup from './components/list/spiceup.vue';
 import courses from './components/list/courses.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
+import './assets/style/font.css';
 
 const routes = [
   {path: '/', component: App},
