@@ -1,31 +1,21 @@
 <template>
-    <div :style="{'text-align':decideTitleDisplay}">
+    <div>
         <h2>{{textTitle}}</h2>
         <p>{{text}}</p>
     </div>
 </template>
 
-<script>
-import global_ from '../../Global';
-
-export default {
-    props:{
-        textTitle: {
-            type: String,
-            default: 'TITLE'
-        },
-        text: {
-            type: String,
-            default: 'text'
-        }
+<script setup>
+defineProps({
+    textTitle: {
+        type: String,
+        default: 'TITLE'
     },
-    computed:{
-        decideTitleDisplay: () => {
-            if(document.documentElement.clientWidth > global_.MIDDLE_SCREEN) return 'left';
-            else return 'center';
-        }
+    text: {
+        type: String,
+        default: 'text'
     }
-}
+})
 </script>
 
   
@@ -39,6 +29,12 @@ div {
     width: 100%;
     text-align: left;
     align-self: flex-start;
+}
+
+@media only screen and (max-width: 1250px) {
+    div {
+        text-align: center;
+    }
 }
 </style>
   

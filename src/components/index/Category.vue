@@ -1,5 +1,5 @@
 <template>
-    <div class="category-block" :style="{'flex-direction': decideArrangement}">
+    <div class="category-block">
         <TextBox v-bind="$attrs" />
         <Glass v-bind="$attrs" @click="toPage(link)"/>
     </div>
@@ -9,8 +9,7 @@
 <script>
     import TextBox from './Note/TextBox.vue';
     import Glass from './Note/Glass.vue';
-    import global_ from '../Global';
-
+    
     export default {
         props:{
             link:{
@@ -24,15 +23,8 @@
                 this.$router.push({path: path});
             }
         },
-        computed:{
-            decideArrangement: () => {
-                if(document.documentElement.clientWidth > global_.MIDDLE_SCREEN) return 'row';
-                else return 'column';
-            }
-        },
         components:{
-            TextBox,
-            Glass
+            TextBox, Glass
         }
     };
 </script>
@@ -41,11 +33,18 @@
 .category-block {
     padding: 0 15% 0 15%;
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
     align-items: center;
 }
 
 .blank {
   height: 15rem;
+}
+
+@media only screen and (max-width: 1250px) {
+    .category-block {
+        padding: 0;
+        flex-direction: column;
+    }   
 }
 </style>
