@@ -74,19 +74,19 @@
 
 @media (prefers-color-scheme: light) {
     .NB {
-        border-color: #afb8c1;
+        border-color: var(--color-border-dark);
     }
     .NB:hover {
-        border-color: #526e87;
+        border-color: var(--color-shizuku-gray-blue);
     }
 }
 
 @media (prefers-color-scheme: dark) {
     .NB {
-        border-color: #d0d7de;
+        border-color: var(--color-border-light);
     }
     .NB:hover {
-        border-color: #b7e0f3;
+        border-color: var(--color-shizuku-light-blue);
     }
 }
 

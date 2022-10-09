@@ -13,6 +13,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --color-border-light: #d0d7de;
+  --color-border-dark: #afb8c1;
+  --color-shizuku-light-blue: #b7e0f3;
+  --color-shizuku-gray-blue: #526e87;
 }
 
 a {

@@ -50,13 +50,13 @@ h2 {
 
 @media (prefers-color-scheme: light) {
     .glass-container {
-        border-color: #afb8c1;
+        border-color: var(--color-border-dark);
     }
 }
 
 @media (prefers-color-scheme: dark) {
     .glass-container {
-        border-color: #d0d7de;
+        border-color: var(--color-border-light);
     }
 }
 </style>

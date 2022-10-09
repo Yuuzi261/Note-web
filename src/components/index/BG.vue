@@ -13,7 +13,7 @@
     bottom: 0;
     right: 0;
     z-index: -999;
-    background-color: #b7e0f3;
+    background-color: var(--color-shizuku-light-blue);
     background-image: url('../../assets/bg1.svg');
 }
 </style>

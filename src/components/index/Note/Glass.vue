@@ -92,23 +92,23 @@ img {
 
 @media (prefers-color-scheme: light) {
     .glass-container {
-        border-color: #afb8c1;
+        border-color: var(--color-border-dark);
     }
 
     .glass-container:hover {
-        color: #526e87;
-        border-color: #526e87;
+        color: var(--color-shizuku-gray-blue);
+        border-color: var(--color-shizuku-gray-blue);
     }
 }
 
 @media (prefers-color-scheme: dark) {
     .glass-container {
-        border-color: #d0d7de;
+        border-color: var(--color-border-light);
     }
     
     .glass-container:hover {
-        color: #b7e0f3;
-        border-color: #b7e0f3;
+        color: var(--color-shizuku-light-blue);
+        border-color: var(--color-shizuku-light-blue);
     }
 }
 
