@@ -3,33 +3,15 @@
     <NoteBlock v-for="_ in noteContent" :textTitle="_.title" :link="_.link" :icon="_.icon" :alt="_.alt" :key="_" />
 </template>
   
-<script>
+<script setup>
     import BG from '../../components/index/BG.vue';
     import Headline from './shared/NoteListHeadline.vue';
     import NoteBlock from './shared/NoteBlock.vue';
-    import CategoryTitle from '../../../static/CategoryTitle.json';
+    import CategoryData from '../../../static/CategoryData.json';
     import NoteData from '../../../static/NoteData.json';
     
-    export default {
-        setup(){
-            const selfName = CategoryTitle.courses;
-            const noteContent = NoteData.courses;
-
-            return{
-                selfName, noteContent
-            }
-        },
-        data(){
-            return{
-                CategoryTitle, NoteData
-            }
-        },
-        components:{
-            BG,
-            Headline,
-            NoteBlock
-        }
-    }
+    const selfName = CategoryData.data.courses.textTitle;
+    const noteContent = NoteData.courses;
 </script>
   
 <style scoped>
