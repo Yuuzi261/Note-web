@@ -41,6 +41,7 @@ img {
     animation: hoverGlass 0.05s ease-in-out;
     animation-fill-mode: forwards;
 }
+
 .glass-container {
     width: 675px;
     height: 375px;
@@ -75,9 +76,11 @@ img {
         flex-direction: column;
         align-items: center;
     }
+
     .glass-container {
         width: 80vw;
     }
+
     img {
         width: 45%;
     }
@@ -87,6 +90,7 @@ img {
     .glass-container {
         border-color: #afb8c1;
     }
+
     .glass-container:hover {
         color: #526e87;
         border-color: #526e87;
@@ -97,6 +101,7 @@ img {
     .glass-container {
         border-color: #d0d7de;
     }
+    
     .glass-container:hover {
         color: #b7e0f3;
         border-color: #b7e0f3;

@@ -15,6 +15,10 @@
 </script>
 
 <style scoped>
+h2 {
+    color: #213547;
+}
+
 #title {
     animation: openIn 1s ease-in-out;
 }
