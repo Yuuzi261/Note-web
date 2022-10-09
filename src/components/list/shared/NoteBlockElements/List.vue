@@ -4,7 +4,7 @@
             <!-- <div>
                 <h2>{{title}}</h2>
             </div>     -->
-            <img :src="icon" />
+            <img :src="icon" :alt="alt" />
         </div>
     </div>
 </template>
@@ -12,6 +12,10 @@
 <script setup>
     defineProps({
         icon: {
+            type: String,
+            default: ''
+        },
+        alt: {
             type: String,
             default: ''
         }

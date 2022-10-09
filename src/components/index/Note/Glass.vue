@@ -5,7 +5,7 @@
                 <h2>{{title}}</h2>
                 <div class="notes"><li v-for="note in noteList" :key="note">{{note}}</li></div>
             </div>    
-            <img :src="imgsrc" />
+            <img :src="imgsrc" :alt="imgalt" />
         </div>
     </div> 
 </template>
@@ -21,6 +21,10 @@ defineProps({
         default: ['note1', 'note2', 'note3']
     },
     imgsrc: {
+        type: String,
+        default: ''
+    },
+    imgalt: {
         type: String,
         default: ''
     }

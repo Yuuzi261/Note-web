@@ -1,7 +1,6 @@
 <template>
-    <!-- <BG /> -->
     <Headline :titleText="selfName" />
-    <NoteBlock v-for="_ in noteContent" :textTitle="_.title" :link="_.link" :icon="_.icon" :key="_" />
+    <NoteBlock v-for="_ in noteContent" :textTitle="_.title" :link="_.link" :icon="_.icon" :alt="_.alt" :key="_" />
 </template>
   
 <script>
