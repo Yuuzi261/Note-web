@@ -1,9 +1,0 @@
-const WIDE_SCREEN = 1400
-const MIDDLE_SCREEN = 1250
-const SMALL_SCREEN = 1000
-
-export default{
-    WIDE_SCREEN,
-    MIDDLE_SCREEN,
-    SMALL_SCREEN
-};

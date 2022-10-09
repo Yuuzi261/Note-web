@@ -5,7 +5,7 @@
                 <h2>{{title}}</h2>
                 <div class="notes"><li v-for="note in noteList" :key="note">{{note}}</li></div>
             </div>    
-            <img :src="imgsrc" />
+            <img :src="imgsrc" :alt="imgalt" />
         </div>
     </div> 
 </template>
@@ -21,6 +21,10 @@ defineProps({
         default: ['note1', 'note2', 'note3']
     },
     imgsrc: {
+        type: String,
+        default: ''
+    },
+    imgalt: {
         type: String,
         default: ''
     }
@@ -88,23 +92,23 @@ img {
 
 @media (prefers-color-scheme: light) {
     .glass-container {
-        border-color: #afb8c1;
+        border-color: var(--color-border-dark);
     }
 
     .glass-container:hover {
-        color: #526e87;
-        border-color: #526e87;
+        color: var(--color-shizuku-gray-blue);
+        border-color: var(--color-shizuku-gray-blue);
     }
 }
 
 @media (prefers-color-scheme: dark) {
     .glass-container {
-        border-color: #d0d7de;
+        border-color: var(--color-border-light);
     }
     
     .glass-container:hover {
-        color: #b7e0f3;
-        border-color: #b7e0f3;
+        color: var(--color-shizuku-light-blue);
+        border-color: var(--color-shizuku-light-blue);
     }
 }
 

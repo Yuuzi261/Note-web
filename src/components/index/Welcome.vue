@@ -2,7 +2,7 @@
     <div class="welcome">
         <BG />
         <div class="blank"></div>
-        <img src="/index/welcome.png" />
+        <img src="/index/welcome.png" alt="Nachoneko is sitting on the floor." />
         <Headline />
     </div>
 </template>

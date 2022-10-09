@@ -1,7 +1,7 @@
 <template>
     <welcome />
     <div class="blank"></div>
-    <Category v-for="_ in Content" :title="_.title" :noteList="_.noteList" :imgsrc="_.imgsrc" :textTitle="_.textTitle" :text="_.text" :link="_.link" :key="_" />
+    <Category v-for="_ in Content" :title="_.title" :noteList="_.noteList" :imgsrc="_.imgsrc" :imgalt="_.imgalt" :textTitle="_.textTitle" :text="_.text" :link="_.link" :key="_" />
 </template>
 
 <script>
