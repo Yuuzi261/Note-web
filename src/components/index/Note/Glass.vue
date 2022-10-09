@@ -3,7 +3,7 @@
         <div class="glass-container">
             <div>
                 <h2>{{title}}</h2>
-                <div class="notes"><li v-for="note in noteList" :key="note">{{note}}</li></div>
+                <div class="notes"><ul><li v-for="note in noteList" :key="note">{{note}}</li></ul></div>
             </div>    
             <img :src="imgsrc" :alt="imgalt" />
         </div>
@@ -62,6 +62,11 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: left;
+}
+
+.notes ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .notes li{
