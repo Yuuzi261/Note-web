@@ -1,6 +1,6 @@
 <template>
     <div class="NB-block">
-        <div @click="toNote(link)" class="NB" :style="{'flex-direction': decideArrangement}" >
+        <div @click="toNote(link)" class="NB" >
             <List v-bind="$attrs" />
             <div class="flex-blank"></div>
             <Logo v-bind="$attrs" />
@@ -12,7 +12,6 @@
 <script>
     import List from './NoteBlockElements/List.vue';
     import Logo from './NoteBlockElements/NoteTextBox.vue';
-    import global_ from '../../Global';
 
     export default{
         props:{
@@ -24,12 +23,6 @@
         methods: {
             toNote: (link) => {
                 window.open(link)
-            }
-        },
-        computed:{
-            decideArrangement: () => {
-                if(document.documentElement.clientWidth > global_.MIDDLE_SCREEN) return 'row';
-                else return 'column';
             }
         },
         components:{
@@ -48,6 +41,7 @@
 
 .NB {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 80%;
@@ -62,6 +56,20 @@
     cursor: pointer;
     animation: hoverNB 0.05s ease-in;
     animation-fill-mode: forwards;
+}
+
+.flex-blank {
+    width: 20%;
+}
+
+.blank {
+    height: 4.5rem;
+}
+
+@media only screen and (max-width: 1250px) {
+    .NB {
+        flex-direction: column;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -80,14 +88,6 @@
     .NB:hover {
         border-color: #b7e0f3;
     }
-}
-
-.flex-blank {
-    width: 20%;
-}
-
-.blank {
-    height: 4.5rem;
 }
 
 @keyframes hoverNB {

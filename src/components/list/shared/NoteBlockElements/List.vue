@@ -38,6 +38,12 @@ h2 {
     border-radius: 10px;
 }
 
+.notes {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;   
+}
+
 @media (prefers-color-scheme: light) {
     .glass-container {
         border-color: #afb8c1;
@@ -48,11 +54,5 @@ h2 {
     .glass-container {
         border-color: #d0d7de;
     }
-}
-
-.notes {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;   
 }
 </style>
