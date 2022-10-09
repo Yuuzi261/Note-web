@@ -10,8 +10,17 @@
     import Headline from './components/index/Headline.vue';
     import Category from './components/index/Category.vue';
     import CategoryData from '../static/CategoryData.json';
+    import NoteData from '../static/NoteData.json';
 
     const Content = CategoryData.data;
+    const Notes = NoteData;
+
+    for(let key in Content) {
+        Content[key]["noteList"] = []
+        for(let i = 0;i < NoteData[key].length;i++) {
+            Content[key]["noteList"].push(Notes[key][i]["title"]);
+        }
+    }
 </script>
 
 <style scoped>
