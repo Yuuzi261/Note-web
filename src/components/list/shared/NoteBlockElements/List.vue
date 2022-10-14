@@ -4,7 +4,7 @@
             <!-- <div>
                 <h2>{{title}}</h2>
             </div>     -->
-            <img :src="icon" />
+            <img :src="icon" :alt="alt" />
         </div>
     </div>
 </template>
@@ -12,6 +12,10 @@
 <script setup>
     defineProps({
         icon: {
+            type: String,
+            default: ''
+        },
+        alt: {
             type: String,
             default: ''
         }
@@ -38,21 +42,21 @@ h2 {
     border-radius: 10px;
 }
 
+.notes {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;   
+}
+
 @media (prefers-color-scheme: light) {
     .glass-container {
-        border-color: #afb8c1;
+        border-color: var(--color-border-dark);
     }
 }
 
 @media (prefers-color-scheme: dark) {
     .glass-container {
-        border-color: #d0d7de;
+        border-color: var(--color-border-light);
     }
-}
-
-.notes {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;   
 }
 </style>

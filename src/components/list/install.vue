@@ -1,36 +1,17 @@
 <template>
-    <!-- <BG /> -->
     <Headline :titleText="selfName" />
-    <NoteBlock v-for="_ in noteContent" :textTitle="_.title" :link="_.link" :icon="_.icon" :key="_" />
+    <NoteBlock v-for="_ in noteContent" :textTitle="_.title" :link="_.link" :icon="_.icon" :alt="_.alt" :key="_" />
 </template>
 
-<script>
+<script setup>
     import BG from '../../components/index/BG.vue';
     import Headline from './shared/NoteListHeadline.vue';
     import NoteBlock from './shared/NoteBlock.vue';
-    import CategoryTitle from '../../../static/CategoryTitle.json';
+    import CategoryData from '../../../static/CategoryData.json';
     import NoteData from '../../../static/NoteData.json';
-
-    export default {
-        setup(){
-            const selfName = CategoryTitle.install;
-            const noteContent = NoteData.install;
-
-            return{
-                selfName, noteContent
-            }
-        },
-        data(){
-            return{
-                CategoryTitle, NoteData
-            }
-        },
-        components:{
-            BG,
-            Headline,
-            NoteBlock
-        }
-    }
+    
+    const selfName = CategoryData.data.install.textTitle;
+    const noteContent = NoteData.install;
 </script>
   
 <style scoped>

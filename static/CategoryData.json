@@ -1,29 +1,29 @@
 {
     "data":
-    [ 
-        {
+    { 
+        "install": {
             "title": "install",
-            "noteList": ["安裝 Python", "安裝 Visual Studio Code", "安裝 Git"],
             "imgsrc": "/Note-web/index/1.png",
+            "imgalt": "Nachoneko is eating pizza",
             "textTitle": "安裝教學",
             "text": "入門級簡易安裝教學",
             "link": "install"
         },
-        {
+        "spiceup": {
             "title": "spice up",
-            "noteList": ["美化 Windows Terminal", "提升 PowerShell 的使用體驗"],
             "imgsrc": "/Note-web/index/2.png",
+            "imgalt": "Nachoneko is playing game",
             "textTitle": "個人化",
             "text": "想來點不一樣的? 試試這個",
             "link": "spiceup"
         },
-        {
+        "courses": {
             "title": "courses",
-            "noteList": ["MACHINE LEARNING 2022 SPRING"],
             "imgsrc": "/Note-web/index/3.png",
+            "imgalt": "Nachoneko is sleeping",
             "textTitle": "課程筆記",
             "text": "存放我公開的上課筆記",
             "link": "courses"
         }
-    ]
+    }
 }

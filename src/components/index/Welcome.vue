@@ -1,36 +1,25 @@
 <template>
-    <div class="welcome" :style="{'height':getClientHeight}">
+    <div class="welcome">
         <BG />
         <div class="blank"></div>
-        <img src="/index/welcome.png" />
+        <img src="/index/welcome.png" alt="Nachoneko is sitting on the floor." />
         <Headline />
     </div>
 </template>
 
-<script>
+<script setup>
     import BG from './BG.vue';
     import Headline from './Headline.vue';
-    import global_ from '../Global';
-
-    export default {
-    computed: {
-        getClientHeight: () => {
-            let clientHeight = document.documentElement.clientHeight + "px";
-            window.onresize = () => {
-                clientHeight = document.documentElement.clientHeight + "px";
-                return clientHeight;
-            };
-            return clientHeight;
-        }
-    },
-    components: { BG, Headline }
-}
 </script>
 
 <style scoped>
 img {
     width: 100%;
     max-width: max-content;
+}
+
+.welcome {
+    height: 100vh;
 }
 
 .blank {

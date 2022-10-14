@@ -1,6 +1,6 @@
 <template>
     <div class="NB-block">
-        <div @click="toNote(link)" class="NB" :style="{'flex-direction': decideArrangement}" >
+        <div @click="toNote(link)" class="NB" >
             <List v-bind="$attrs" />
             <div class="flex-blank"></div>
             <Logo v-bind="$attrs" />
@@ -12,7 +12,6 @@
 <script>
     import List from './NoteBlockElements/List.vue';
     import Logo from './NoteBlockElements/NoteTextBox.vue';
-    import global_ from '../../Global';
 
     export default{
         props:{
@@ -24,12 +23,6 @@
         methods: {
             toNote: (link) => {
                 window.open(link)
-            }
-        },
-        computed:{
-            decideArrangement: () => {
-                if(document.documentElement.clientWidth > global_.MIDDLE_SCREEN) return 'row';
-                else return 'column';
             }
         },
         components:{
@@ -48,6 +41,7 @@
 
 .NB {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 80%;
@@ -64,30 +58,36 @@
     animation-fill-mode: forwards;
 }
 
-@media (prefers-color-scheme: light) {
-    .NB {
-        border-color: #afb8c1;
-    }
-    .NB:hover {
-        border-color: #526e87;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .NB {
-        border-color: #d0d7de;
-    }
-    .NB:hover {
-        border-color: #b7e0f3;
-    }
-}
-
 .flex-blank {
     width: 20%;
 }
 
 .blank {
     height: 4.5rem;
+}
+
+@media only screen and (max-width: 1250px) {
+    .NB {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .NB {
+        border-color: var(--color-border-dark);
+    }
+    .NB:hover {
+        border-color: var(--color-shizuku-gray-blue);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .NB {
+        border-color: var(--color-border-light);
+    }
+    .NB:hover {
+        border-color: var(--color-shizuku-light-blue);
+    }
 }
 
 @keyframes hoverNB {
