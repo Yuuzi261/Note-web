@@ -1,5 +1,6 @@
 <template>
-    <welcome />
+    <Toggle />
+    <Welcome />
     <div class="blank"></div>
     <Category v-for="_ in Content" :title="_.title" :noteList="_.noteList" :imgsrc="_.imgsrc" :imgalt="_.imgalt" :textTitle="_.textTitle" :text="_.text" :link="_.link" :key="_" />
 </template>
@@ -9,6 +10,7 @@
     import BG from './components/index/BG.vue';
     import Headline from './components/index/Headline.vue';
     import Category from './components/index/Category.vue';
+    import Toggle from './components/Toggle.vue';
     import CategoryData from '../static/CategoryData.json';
     import NoteData from '../static/NoteData.json';
 
