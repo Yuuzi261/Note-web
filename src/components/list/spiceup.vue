@@ -1,10 +1,11 @@
 <template>
+    <Toggle />
     <Headline :titleText="selfName" />
     <NoteBlock v-for="_ in noteContent" :textTitle="_.title" :link="_.link" :icon="_.icon" :alt="_.alt" :key="_" />
 </template>
   
 <script setup>
-    import BG from '../../components/index/BG.vue';
+    import Toggle from '../Toggle.vue';
     import Headline from './shared/NoteListHeadline.vue';
     import NoteBlock from './shared/NoteBlock.vue';
     import CategoryData from '../../../static/CategoryData.json';
