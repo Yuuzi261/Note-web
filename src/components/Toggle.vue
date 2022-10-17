@@ -42,7 +42,7 @@
     /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
     /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
     /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
-    background-image: url('wapper.png'), linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);
+    background-image: url('/wapper.png'), linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);
     background-repeat: no-repeat;
     transition: all 0.6s ease-in-out;
 }
@@ -177,7 +177,7 @@ input[type="checkbox"]{
 }
 @media only screen and (max-width: 1250px) {
     .wrapper{
-        background-image: url('small_wapper.png');
+        background-image: url('/small_wapper.png');
         background-size: cover;
     }
     .wrapper ul{
