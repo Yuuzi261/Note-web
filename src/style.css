@@ -18,6 +18,7 @@
   --color-border-dark: #afb8c1;
   --color-shizuku-light-blue: #b7e0f3;
   --color-shizuku-gray-blue: #526e87;
+  --color-default-dark-text: #213547;
 }
 
 a {
@@ -87,7 +88,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: var(--color-default-dark-text);
     background-color: #fdfdfd;
   }
   a:hover {

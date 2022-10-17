@@ -77,7 +77,7 @@
     top: calc(50% - 1px);
     left: 30%;
     width: 40%;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--color-default-dark-text);
     transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .menu-btn:before{
@@ -102,11 +102,11 @@
 }
 #active:checked + .menu-btn:before {
     transform: rotate(45deg);
-    border-color: #000;
+    border-color: var(--color-default-dark-text);
 }
 #active:checked + .menu-btn:after {
     transform: rotate(-45deg);
-    border-color: #000;
+    border-color: var(--color-default-dark-text);
 }
 .wrapper ul{
     position: absolute;
