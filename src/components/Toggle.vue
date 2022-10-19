@@ -4,22 +4,15 @@
     <label for="active" class="close"></label>
     <div class="wrapper">
         <ul>
-            <li @click="toPage()"><a>Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li v-for="(value, key) in menu" :key="key"><a :href="value">{{key}}</a></li>
         </ul>
     </div>
 </template>
 
-<script>
-    export default {
-        methods:{
-            toPage(link = ''){
-                const path = '/' + link
-                this.$router.push({path: path});
-            }
-        }
-    };
+<script setup>
+    import MenuInfo from '../../static/MenuInfo.json';
+
+    const menu = MenuInfo.menu;
 </script>
   
 <style scoped>
