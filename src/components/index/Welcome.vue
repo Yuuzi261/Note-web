@@ -46,6 +46,6 @@ a:hover {
 }
 
 .blank {
-  height: 8.5rem;
+  height: 13.1vh;
 }
 </style>
