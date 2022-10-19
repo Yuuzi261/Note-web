@@ -23,10 +23,9 @@ h2 {
     animation: openIn 1s ease-in-out;
 }
 
-#title-block {
+/* #title-block {
     height: 300px;
-    /* padding-top: 150px; */
-}
+} */
 
 @keyframes openIn {
     0% {

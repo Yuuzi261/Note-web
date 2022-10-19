@@ -6,6 +6,7 @@ import install from './components/list/install.vue';
 import spiceup from './components/list/spiceup.vue';
 import courses from './components/list/courses.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
+import VueScrollTo from 'vue-scrollto'
 import './assets/style/font.css';
 
 const routes = [
@@ -23,5 +24,6 @@ const router = createRouter({
 const app = createApp(Main);
 
 app.use(router);
+app.use(VueScrollTo)
 
 app.mount('#app');

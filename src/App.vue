@@ -1,8 +1,10 @@
 <template>
     <Toggle />
     <Welcome />
-    <div class="blank"></div>
-    <Category v-for="_ in Content" :title="_.title" :noteList="_.noteList" :imgsrc="_.imgsrc" :imgalt="_.imgalt" :textTitle="_.textTitle" :text="_.text" :link="_.link" :key="_" />
+    <section id="ready">
+        <div class="blank"></div>
+        <Category v-for="_ in Content" :title="_.title" :noteList="_.noteList" :imgsrc="_.imgsrc" :imgalt="_.imgalt" :textTitle="_.textTitle" :text="_.text" :link="_.link" :key="_" />
+    </section>
 </template>
 
 <script setup>
