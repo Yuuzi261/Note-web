@@ -29,6 +29,12 @@
 
 <style scoped>
 .blank {
-  height: 10rem;
+    height: 10rem;
+}
+
+@media only screen and (max-width: 1250px) {
+    .blank {
+        height: 10vh;
+    }
 }
 </style>

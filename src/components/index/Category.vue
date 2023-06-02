@@ -45,6 +45,9 @@
     .category-block {
         padding: 0;
         flex-direction: column;
-    }   
+    }
+    .blank {
+        height: 10vh;
+    }
 }
 </style>
